@@ -1,1 +1,1 @@
-# odoo_task_screenshot
+# Odoo task screenshot
