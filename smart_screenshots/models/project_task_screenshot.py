@@ -58,6 +58,7 @@ class ProjectTaskScreenshot(models.Model):
             domain = self.env['project.screenshot.settings.domain'].search([('name', '=', source.netloc)], limit=1)
             if domain:
                 settings = self.env['project.screenshot.settings'].search([('project_id', '=', rec.project_id.id),
+                                                                           ('user_id', '=', self.env.user.id),
                                                                            ('source_domain_id', '=', domain.id)],
                                                                           limit=1)
                 if settings:

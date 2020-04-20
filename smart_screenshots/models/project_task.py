@@ -23,7 +23,7 @@ class ProjectTask(models.Model):
     @api.multi
     def show_screenshot_settings(self):
         action = self.env.ref('smart_screenshots.project_screenshot_settings_action').read()[0]
-        action['domain'] = [('project_id', '=', self.project_id.id)]
+        action['domain'] = [('project_id', '=', self.project_id.id), ('user_id', '=', self.env.user.id)]
         action['context'] = {'default_project_id': self.project_id.id}
         return action
 
