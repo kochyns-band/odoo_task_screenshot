@@ -22,6 +22,7 @@
         'views/project_task_screenshot.xml',
         'views/project_task.xml',
     ],
+    'images': ['static/description/banner.png'],
     'license': 'AGPL-3',
     'installable': True,
     "application": False,
